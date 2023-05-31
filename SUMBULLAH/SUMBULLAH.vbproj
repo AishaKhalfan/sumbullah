@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A57C032D-D30C-4B29-9B08-C15E0DEE81BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>EPMS.My.MyApplication</StartupObject>
+    <RootNamespace>EPMS</RootNamespace>
+    <AssemblyName>EPMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\wsl.localhost\Ubuntu-20.04\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>EPMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>EPMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>36B02D96808EF4757BCD94369F8E78C013598AAE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SUMBULLAH_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CloudToolkitN6">
+      <HintPath>D:\Osama_Stuff\University Work\.Net Work\.Net Softs\CloudToolkitN6.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>..\..\Payroll Management System\Payroll Management System\obj\x86\Debug\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Connection.vb" />
+    <Compile Include="dbase.vb" />
+    <Compile Include="Frm_About.Designer.vb">
+      <DependentUpon>Frm_About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Admin_Login.Designer.vb">
+      <DependentUpon>Frm_Admin_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Admin_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Calculator.Designer.vb">
+      <DependentUpon>Frm_Calculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Calculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Database_Backup.Designer.vb">
+      <DependentUpon>Frm_Database_Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Database_Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Department.Designer.vb">
+      <DependentUpon>Frm_Department.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Department.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Employee.Designer.vb">
+      <DependentUpon>Frm_Employee.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Employee_Performance.Designer.vb">
+      <DependentUpon>Frm_Employee_Performance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Employee_Performance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.vb">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.vb">
+      <DependentUpon>Frm_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_News.Designer.vb">
+      <DependentUpon>Frm_News.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_News.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Payslip.Designer.vb">
+      <DependentUpon>Frm_Payslip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Payslip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_PerformanceAll.Designer.vb">
+      <DependentUpon>Frm_PerformanceAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PerformanceAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Restore.Designer.vb">
+      <DependentUpon>Frm_Restore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Restore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Search.Designer.vb">
+      <DependentUpon>Frm_Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ViewAll.Designer.vb">
+      <DependentUpon>Frm_ViewAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ViewAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="payroll.Designer.vb">
+      <DependentUpon>payroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="slip.Designer.vb">
+      <DependentUpon>slip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="slip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUMBULLAHDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SUMBULLAHDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Frm_About.resx">
+      <DependentUpon>Frm_About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Admin_Login.resx">
+      <DependentUpon>Frm_Admin_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Calculator.resx">
+      <DependentUpon>Frm_Calculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Database_Backup.resx">
+      <DependentUpon>Frm_Database_Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Department.resx">
+      <DependentUpon>Frm_Department.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Employee.resx">
+      <DependentUpon>Frm_Employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Employee_Performance.resx">
+      <DependentUpon>Frm_Employee_Performance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_News.resx">
+      <DependentUpon>Frm_News.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Payslip.resx">
+      <DependentUpon>Frm_Payslip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_PerformanceAll.resx">
+      <DependentUpon>Frm_PerformanceAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Restore.resx">
+      <DependentUpon>Frm_Restore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Search.resx">
+      <DependentUpon>Frm_Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ViewAll.resx">
+      <DependentUpon>Frm_ViewAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payroll.resx">
+      <DependentUpon>payroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="slip.resx">
+      <DependentUpon>slip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\HRMSEntities.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SUMBULLAHDataSet.xsc">
+      <DependentUpon>SUMBULLAHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SUMBULLAHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SUMBULLAHDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SUMBULLAHDataSet.xss">
+      <DependentUpon>SUMBULLAHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SUMBULLAH_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ktimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kwrite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kxconfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kxconfig1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\looknfeel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mycomputer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mydocuments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mymac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_editorspackage_editors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_edutainment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solutions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Touch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syringe.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payroll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
